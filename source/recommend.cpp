@@ -14,12 +14,14 @@ using Graph = vector<vector<int> >;
 using ll = long long;
 
 void recommend(priority_queue<int> probset, int diff){
+    int max = probset.size();
     float avg = probset.top(); probset.pop();
     int counter = 0;
     while (avg >= diff) {
         counter++;
         avg = (avg * counter + probset.top()) / (counter + 1); // try avging the next number
         probset.pop();
+        if (counter >= max) break;
     }
     cout << counter << endl;
     return;
