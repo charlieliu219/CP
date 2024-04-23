@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <algorithm> // For algorithms like std::sort
 
 #define rep(a, b)   for(int a = 0; a < (b); ++a)
 #define all(a)      (a).begin(),(a).end()
@@ -7,6 +10,8 @@
 using namespace std;
 using Graph = vector<vector<int>>;
 using ll = long long;
+
+
 
 int main() {
     ios::sync_with_stdio(false);

@@ -12,6 +12,8 @@ using namespace std;
 // using Graph = vector<vector<int>>;
 using ll = long long;
 
+
+
 void transmutatio(int num_colors, vector<int> colors)
 {
     vector<int> indices;
