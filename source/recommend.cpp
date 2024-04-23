@@ -19,9 +19,9 @@ void recommend(priority_queue<int> probset, int diff){
     int counter = 0;
     while (avg >= diff) {
         counter++;
+        if (probset.empty()) break;
         avg = (avg * counter + probset.top()) / (counter + 1); // try avging the next number
         probset.pop();
-        if (counter >= max) break;
     }
     cout << counter << endl;
     return;
@@ -45,14 +45,6 @@ int main() {
 
         recommend(probset, diff);
     }
-
-    
-
-
-    // read input and parse into a vector 
-    // sort the vector from large to small
-    // calculate avg until smaller than u 
-    // return number of recomended problems
 
     return 0;
 }
