@@ -8,7 +8,7 @@
 #define endl        '\n'
 
 using namespace std;
-using Graph = vector<vector<int>>;
+using Graph = vector<vector<int> >;
 using ll = long long;
 
 

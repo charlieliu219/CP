@@ -10,13 +10,13 @@
 #define endl        '\n'
 
 using namespace std;
-using Graph = vector<vector<int> >;
-using ll = long long;
+// using Graph = vector<vector<int> >;
+// using ll = long long;
 
-void recommend(priority_queue<int> probset, int diff){
-    int max = probset.size();
+void recommend(priority_queue<long long> probset, long long diff){
+    long long max = probset.size();
     float avg = probset.top(); probset.pop();
-    int counter = 0;
+    long long counter = 0;
     while (avg >= diff) {
         counter++;
         if (probset.empty()) break;
@@ -33,14 +33,14 @@ int main() {
     cout.precision(10);
 
     string line;
-    int num, diff;
+    long long num, diff;
     while (getline(cin, line)) {
         istringstream iss(line);
         iss >> num >> diff;
 
         getline(cin, line);
         istringstream probs(line);
-        priority_queue<int> probset; int prob;
+        priority_queue<long long> probset; long long prob;
         while (probs >> prob) probset.push(prob);
 
         recommend(probset, diff);
