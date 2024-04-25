@@ -10,12 +10,12 @@
 #define endl        '\n'
 
 using namespace std;
-// using Graph = vector<vector<int> >;
-// using ll = long long;
+using Graph = vector<vector<int> >;
+using ll = long long;
 
 void recommend(priority_queue<long long> probset, long long diff){
     long long max = probset.size();
-    float avg = probset.top(); probset.pop();
+    double avg = probset.top(); probset.pop();
     long long counter = 0;
     while (avg >= diff) {
         counter++;
