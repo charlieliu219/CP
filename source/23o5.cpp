@@ -20,24 +20,18 @@ int mul(int a, int b){ return a * b;}
 void find(vector<int> nums) {
     vector<function<int (int, int)> > ops = {add, sub, mul};
     sort(all(nums));
-    // edge cases
+    // use memoisation to avoid duplicate calculations
+
     do {
         for (auto op1 : ops) {
             for (auto op2 : ops) {
                 for (auto op3 : ops) {
                     for (auto op4 : ops) {
-                        for (int i = 0; i < 4; i++) {
-                            for (int j = 0; j < 4; j++) {
-                                for (int k = 0; k < 4; k++) {
-                                    for (int l = 0; l < 4; l++) {
-                                        // edge cases
-                                        if (i == j || i == k || i == l || j == k || j == l || k == l) continue;
-                                        
                                         int result = op4(op3(op2(op1(nums[0], nums[1]), nums[2]), nums[3]), nums[4]);
                                         if (result == 23) {
                                             cout << "Possible" << endl;
                                             return;
-}}}}}}}}}} while (next_permutation(all(nums)));
+}}}}}} while (next_permutation(all(nums)));
 
     cout << "Impossible" << endl;
 }
