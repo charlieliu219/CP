@@ -70,6 +70,7 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.precision(10);
+    freopen("1.in", "r", stdin);
 
     // compare("a*", "a"); 
     string testcases; getline(cin, testcases); ll cases = stoi(testcases);
